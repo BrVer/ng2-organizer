@@ -1,0 +1,6 @@
+<h3>Events</h3>
+<ul *ngFor="#event of events" (click)="gotoEventDetail(event)">
+    <li>
+        <h4>{{event.id}} {{event.name}} (from {{event.date_start}} to {{event.date_end}}) </h4>
+    </li>
+</ul>

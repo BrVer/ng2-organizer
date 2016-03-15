@@ -4,9 +4,9 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 import { EventService }         from './event.service';
 import { NoteService }          from './note.service';
 import { DashboardComponent }   from './dashboard.component';
-//import { EventsComponent }      from './events.component';
+import { EventsComponent }      from './events.component';
 //import { EventDetailComponent } from './event-detail.component';
-//import { NotesComponent }       from './notes.component';
+import { NotesComponent }       from './notes.component';
 //import { NoteDetailComponent }  from './note-detail.component';
 
 @Component({
@@ -21,37 +21,28 @@ import { DashboardComponent }   from './dashboard.component';
     ]
 })
 
-//@RouteConfig([
-//    {
-//        path: '/dashboard',
-//        name: 'Dashboard',
-//        component: DashboardComponent,
-//        useAsDefault: true
-//    },{
-//        path: '/events',
-//        name: 'Events',
-//        component: EventsComponent
-//    },{
-//        path: '/events/:id',
-//        name: 'EventDetail',
-//        component: EventDetailComponent
-//    },{
-//        path: '/notes',
-//        name: 'Notes',
-//        component: NotesComponent
-//    },{
-//        path: '/notes/:id',
-//        name: 'NoteDetail',
-//        component: NoteDetailComponent
-//    }
-//])
-
 @RouteConfig([
     {
         path: '/dashboard',
         name: 'Dashboard',
         component: DashboardComponent,
         useAsDefault: true
+    },{
+        path: '/events',
+        name: 'Events',
+        component: EventsComponent
+    //},{
+    //    path: '/events/:id',
+    //    name: 'EventDetail',
+    //    component: EventDetailComponent
+    },{
+        path: '/notes',
+        name: 'Notes',
+        component: NotesComponent
+    //},{
+    //    path: '/notes/:id',
+    //    name: 'NoteDetail',
+    //    component: NoteDetailComponent
     }
 ])
 export class AppComponent {

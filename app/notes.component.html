@@ -1,0 +1,6 @@
+<h3>Notes</h3>
+<ul *ngFor="#note of notes" (click)="gotoNoteDetail(note)">
+    <li>
+        <h4>{{note.id}} (priority:{{note.priority}}) {{note.text}}</h4>
+    </li>
+</ul>
