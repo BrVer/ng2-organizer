@@ -22,9 +22,9 @@ export class DashboardComponent implements OnInit {
     ) {}
     ngOnInit() {
         this._noteService.getNotes()
-            .then(notes => this.notes = _.filter(notes, (note) => { return note.priority < 2;}));
+            .then(notes => this.notes = _.filter(notes, note => note.priority < 2));
         this._eventService.getEvents()
-            .then(events => this.events = _.filter(events, (event) => { return event.date_start > new Date;}));
+            .then(events => this.events = _.filter(events, event => event.date_start > new Date));
     }
     gotoNoteDetail(note: Note) {
         let link = ['NoteDetail', { id: note.id }];
