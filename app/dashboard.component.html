@@ -7,12 +7,11 @@
             <div class="panel-heading">
                 <h4 class="panel-title">Important Notes</h4>
             </div>
-            <div class="panel-body">
-                <ul class="list-group">
-                    <li  class="list-group-item" *ngFor="#note of notes" (click)="gotoNoteDetail(note)">
-                        <h4>{{note.text}}</h4>
-                    </li>
-                </ul>
+            <div class="list-group">
+                <button type="button"  class="list-group-item"
+                   *ngFor="#note of notes" (click)="gotoNoteDetail(note)">
+                    {{note.text}}
+                </button>
             </div>
         </div>
     </div>
@@ -21,27 +20,20 @@
             <div class="panel-heading">
                 <h4 class="panel-title">Future Events</h4>
             </div>
-            <div class="panel-body">
-                <!--<ul>-->
-                    <!--<li *ngFor="#event of events" (click)="gotoEventDetail(event)">-->
-                        <!--<h4>{{event.name}} (from {{event.date_start | date:'medium'}} to {{event.date_end | date:'medium'}}) </h4>-->
-                    <!--</li>-->
-                <!--</ul>-->
-                <table class="table table-hover">
-                    <tr>
-                        <th>id</th>
-                        <th>name</th>
-                        <th>start date</th>
-                        <th>end date</th>
-                    </tr>
-                    <tr *ngFor="#event of events" (click)="gotoEventDetail(event)">
-                        <td>{{event.id}}</td>
-                        <td>{{event.name}}</td>
-                        <td>{{event.date_start | date:'medium'}}</td>
-                        <td>{{event.date_end | date:'medium'}}</td>
-                    </tr>
-                </table>
-            </div>
+            <table class="table table-hover">
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>start date</th>
+                    <th>end date</th>
+                </tr>
+                <tr *ngFor="#event of events" (click)="gotoEventDetail(event)">
+                    <td>{{event.id}}</td>
+                    <td>{{event.name}}</td>
+                    <td>{{event.date_start | date:'medium'}}</td>
+                    <td>{{event.date_end | date:'medium'}}</td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
